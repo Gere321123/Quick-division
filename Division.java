@@ -64,21 +64,18 @@ public class Division {
             i *= 10;
             characters_to_multiply[j] = multiply;
             j++;
-            //This section is trying to find recurrence in the array and its most likely not the best method
-            for (int k = sn_pieces; k < j; k++) {
-                for (int g = sn_pieces; g < j; g++) {
-                    if (characters_to_multiply[g] == characters_to_multiply[k] && g != k) {
-                        end = true;
-                        int repeate = g - k;
-                        g = j;
-                        k = j;
-                        for (int u = j; u < big_number_size; u++) {
-                            characters_to_multiply[u] = characters_to_multiply[u - repeate];
-                        }
-
-                    }
+            //This section is trying to find recurrence in the array and is most likely the best way!
+            int characters_to_multiply_summ+=characters_to_multiply[j];
+            if ( characters_to_multiply_summ % small_number == 0){
+                end= true;
+                int repeate = g - k;
+                g = j;
+                k = j;
+                for (int u = j; u < big_number_size; u++) {
+                    characters_to_multiply[u] = characters_to_multiply[u - repeate];
                 }
             }
+
         }
     }
 }
