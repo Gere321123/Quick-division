@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Division {
+    int start;
     int[] big_number;
     int[] characters_to_multiply;
     int big_number_size;
@@ -56,21 +57,22 @@ public class Division {
                 i *= 10;
             } else {
                 end = false;
+               start = j;
             }
         }
+        int characters_to_multiply_summ= 0;
         int sn_pieces = j;
         while (j < big_number_size && !end) {
             int multiply = (10 * i) - (((10 * i) / small_number) * small_number);
             i *= 10;
             characters_to_multiply[j] = multiply;
             j++;
+
             //This section is trying to find recurrence in the array and is most likely the best way!
-            int characters_to_multiply_summ+=characters_to_multiply[j];
+             characters_to_multiply_summ+=multiply;
             if ( characters_to_multiply_summ % small_number == 0){
                 end= true;
-                int repeate = g - k;
-                g = j;
-                k = j;
+                int repeate = j - start;
                 for (int u = j; u < big_number_size; u++) {
                     characters_to_multiply[u] = characters_to_multiply[u - repeate];
                 }
