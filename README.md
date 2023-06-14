@@ -1,8 +1,5 @@
 # Quick-division
 
-Ez a program az osztást felgyorsitja bizonyos esetekben 
-pl ha az 1. számunk egy igen nagy szám és a 2. az relativ kicsi akkor a program 
-a nagy számot felirja egy kisebb ként és ha az osztható a 2. számmal akkor az 1. számunk is osztható lesz a 2. számmal
-ha nem akkor pedig a 2. szám se lesz osztható az 1.-vel!
+This program speeds up the division in certain cases, e.g. if our 1st number is a very large number and the 2nd is relatively small, then the program writes the large number as a smaller number and if it is divisible by the 2nd number, then our 1st number can also be divided will be with the 2nd number, if not, then the 2nd number will not be divisible by the 1st either!
 ----------------------------------------------------------------------------------------------------------------------
-© Saját módszer :))))
+© My method :))))
